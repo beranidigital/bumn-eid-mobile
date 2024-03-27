@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "310727940311",
+    "firebase_url": "https://bumn-eid-2020.firebaseio.com",
+    "project_id": "bumn-eid-2020",
+    "storage_bucket": "bumn-eid-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310727940311:android:dd3ae2a894de67fafa3892",
+        "android_client_info": {
+          "package_name": "com.kembumn.bumneid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310727940311-89q8d9aj71vc3e7g1ddibeat5vdk80a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFnVklrS6F0CP2k4EHNCEKObHwIfGHEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310727940311-89q8d9aj71vc3e7g1ddibeat5vdk80a8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

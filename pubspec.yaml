@@ -1,0 +1,275 @@
+name: bumn_eid
+description: Kementrian BUMN Executive Informational Dashboard mobile application
+
+version: 2.5.7+12
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  redux: ^4.0.0
+  flutter_redux: ^0.6.0
+  injector: ^1.0.8
+  http: ^0.12.0+2
+  json_serializable: ^3.2.5
+  copy_with_extension: ^1.0.7
+  cached_network_image: ^2.0.0-rc
+  rxdart: ^0.23.0
+  solid_bottom_sheet: ^0.1.9
+  equatable: ^1.1.0
+  flutter_secure_storage: ^3.3.1+1
+  after_layout: ^1.0.7+2
+  dio: ^3.0.9
+  flutter_html: ^0.11.1
+  fl_chart: ^0.8.5
+  intl: ^0.16.1
+  quiver: ^2.0.5
+  photo_view: ^0.9.2
+  google_maps_flutter: ^0.5.29
+  url_launcher: ^5.4.2
+  flutter_calendar_carousel: ^1.4.12
+  timeline: ^0.0.1
+  sentry: ">=3.0.0 <4.0.0"
+  onesignal_flutter: ^2.0.0
+  flutter_typeahead: ^1.8.3
+  qr_code_scanner: ^0.3.0
+  get: ^3.24.0
+  charts_flutter: ^0.9.0
+  flutter_staggered_grid_view: ^0.3.3
+  path_provider: ^1.6.27
+  get_storage: ^1.4.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^4.1.1
+  build_runner: ">=1.0.0 <2.0.0"
+  copy_with_extension_gen: ^1.0.7
+  flutter_launcher_icons: ^0.7.3
+
+flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "res/images/eid-logo.jpeg"
+
+
+flutter:
+
+  uses-material-design: true
+
+  # Assets
+  assets:
+    - res/images/
+    - res/values/
+
+  fonts:
+    - family: College
+      fonts:
+        - asset: res/fonts/college/college.ttf
+        - asset: res/fonts/college/collegeb.ttf
+          weight: 700
+
+    - family: poppins
+      fonts:
+        - asset: res/fonts/poppins/Poppins-Black.ttf
+          weight: 900
+        - asset: res/fonts/poppins/Poppins-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: res/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: res/fonts/poppins/Poppins-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: res/fonts/poppins/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: res/fonts/poppins/Poppins-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: res/fonts/poppins/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: res/fonts/poppins/Poppins-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: res/fonts/poppins/Poppins-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: res/fonts/poppins/Poppins-Light.ttf
+          weight: 300
+        - asset: res/fonts/poppins/Poppins-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: res/fonts/poppins/Poppins-Medium.ttf
+          weight: 500
+        - asset: res/fonts/poppins/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: res/fonts/poppins/Poppins-Regular.ttf
+          weight: 400
+        - asset: res/fonts/poppins/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: res/fonts/poppins/Poppins-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: res/fonts/poppins/Poppins-Thin.ttf
+          weight: 100
+        - asset: res/fonts/poppins/Poppins-ThinItalic.ttf
+          weight: 100
+          style: italic
+
+    - family: montserrat
+      fonts:
+        - asset: res/fonts/montserrat/Montserrat-Black.ttf
+          weight: 900
+        - asset: res/fonts/montserrat/Montserrat-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: res/fonts/montserrat/Montserrat-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: res/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: res/fonts/montserrat/Montserrat-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-Light.ttf
+          weight: 300
+        - asset: res/fonts/montserrat/Montserrat-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: res/fonts/montserrat/Montserrat-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-Regular.ttf
+          weight: 400
+        - asset: res/fonts/montserrat/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: res/fonts/montserrat/Montserrat-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: res/fonts/montserrat/Montserrat-Thin.ttf
+          weight: 100
+        - asset: res/fonts/montserrat/Montserrat-ThinItalic.ttf
+          weight: 100
+          style: italic
+
+    - family: opensans
+      fonts:
+        - asset: res/fonts/opensans/OpenSans-Bold.ttf
+          weight: 700
+        - asset: res/fonts/opensans/OpenSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: res/fonts/opensans/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: res/fonts/opensans/OpenSans-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: res/fonts/opensans/OpenSans-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: res/fonts/opensans/OpenSans-Light.ttf
+          weight: 300
+        - asset: res/fonts/opensans/OpenSans-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: res/fonts/opensans/OpenSans-Regular.ttf
+          weight: 400
+        - asset: res/fonts/opensans/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: res/fonts/opensans/OpenSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+
+    - family: worksans
+      fonts:
+        - asset: res/fonts/worksans/WorkSans-Black.ttf
+          weight: 900
+        - asset: res/fonts/worksans/WorkSans-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-Bold.ttf
+          weight: 700
+        - asset: res/fonts/worksans/WorkSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-ExtraBold.ttf
+          weight: 800
+        - asset: res/fonts/worksans/WorkSans-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-ExtraLight.ttf
+          weight: 200
+        - asset: res/fonts/worksans/WorkSans-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-Light.ttf
+          weight: 300
+        - asset: res/fonts/worksans/WorkSans-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-Medium.ttf
+          weight: 500
+        - asset: res/fonts/worksans/WorkSans-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-Regular.ttf
+          weight: 400
+        - asset: res/fonts/worksans/WorkSans-SemiBold.ttf
+          weight: 600
+        - asset: res/fonts/worksans/WorkSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: res/fonts/worksans/WorkSans-Thin.ttf
+          weight: 100
+        - asset: res/fonts/worksans/WorkSans-ThinItalic.ttf
+          weight: 100
+          style: italic
+
+    - family: lato
+      fonts:
+        - asset: res/fonts/lato/Lato-Black.ttf
+          weight: 900
+        - asset: res/fonts/lato/Lato-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: res/fonts/lato/Lato-Bold.ttf
+          weight: 700
+        - asset: res/fonts/lato/Lato-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: res/fonts/lato/Lato-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: res/fonts/lato/Lato-Light.ttf
+          weight: 300
+        - asset: res/fonts/lato/Lato-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: res/fonts/lato/Lato-Regular.ttf
+          weight: 400
+        - asset: res/fonts/lato/Lato-Thin.ttf
+          weight: 100
+        - asset: res/fonts/lato/Lato-ThinItalic.ttf
+          weight: 100
+          style: italic
